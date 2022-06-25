@@ -1,0 +1,13 @@
+<template>
+    <div class="slds-m-around_large">
+        <h1>Welcome to LWC !!</h1>
+    <lightning-input label="Company" required value={inputCompanyName} onchange={handlePreview}></lightning-input>
+    <lightning-button label="Save" onclick={handleSave} ></lightning-button>
+    <p>
+        {msg}
+    </p>
+    <p>
+        {inputCompanyName}
+    </p>
+    </div>
+</template>
