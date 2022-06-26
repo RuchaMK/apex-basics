@@ -10,14 +10,23 @@
         {inputCompanyName}
     </p>
     </div>
-    <div class="slds-m-around_large">
-        <template for:each={result} for:item="acc">
-            <p key={acc.Id}>          
-            {acc.Id}  : {acc.Name}
-            </p>          
-        </template>
-    </div>
-    <!--for(Account acc: result){
-        acc.Id;
-    }-->
+    <div class="slds-grid slds-wrap">        
+            <template for:each={result} for:item="acc" >
+                <div class="slds-col slds-size_1-of-3" key={acc.Id}>
+                <lightning-card  variant="Narrow"    title={acc.Name} icon-name="standard:account" >
+                <span >                    
+                <p >
+                Industry : {acc.Industry} <br/>
+                Rating : {acc.Rating} <br/>
+                WebSite : {acc.WebSite} <br/>
+                Revenue($) : {acc.AnnualRevenue} <br/>
+                </p>
+                </span>
+                </lightning-card>
+                </div>  
+                </template>
+                    </div>
+                    <!--for(Account acc: result){
+                        acc.Id;
+                    }-->
 </template>
