@@ -10,4 +10,14 @@
         {inputCompanyName}
     </p>
     </div>
+    <div class="slds-m-around_large">
+        <template for:each={result} for:item="acc">
+            <p key={acc.Id}>          
+            {acc.Id}  : {acc.Name}
+            </p>          
+        </template>
+    </div>
+    <!--for(Account acc: result){
+        acc.Id;
+    }-->
 </template>
